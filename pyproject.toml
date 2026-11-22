@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ensp-cfg-parser"
+version = "0.1.0"
+authors = [
+  { name="23-WCN" }
+]
+description = "华为eNSP .cfg配置文件解析器"
+readme = "README.md"
+license = { file="LICENSE" }
+requires-python = ">=3.10"
+dependencies = [
+  "click>=8.0",
+  "pydantic>=2.0",
+  "pandas>=2.0",
+  "openpyxl>=3.1"
+]
+
+[project.scripts]
+ensp-parser = "ensp_cfg_parser.cli:main"
